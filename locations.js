@@ -29,12 +29,12 @@ function processInput() {
         }
 
     }
+}
 
-    // add backward compatible event listener to Submit button
-    var submitButton = document.getElementById("button");
-    if (submitButton.addEventListener) {
-        submitButton.addEventListener("click", processInput, false);
-    } else if (submitButton.attachEvent) {
-        submitButton.attachEvent("onclick", processInput);
-    }
+// add backward compatible event listener to Submit button
+var submitButton = document.getElementById("button");
+if (submitButton.addEventListener) {
+    submitButton.addEventListener("click", processInput);
+} else if (submitButton.attachEvent) {
+    submitButton.attachEvent("onclick", processInput);
 }
